@@ -9,8 +9,7 @@ servidor.get('/',(req,res)=>{
     console.log("Alguem fez uma requisição ...");
     res.send("devolvendo requisição ...");
 })
-// Por o servidor para ouvir 
-    servidor.listen(3000)
+
 
 // minha rota 
 servidor.get('/filme',(req,res) =>{
@@ -33,9 +32,29 @@ servidor.get('/generos',(req,res) =>{
         res.send(filmes[posicao]);
     })
 
-// servidor.get('/filmes/:nome',(req,res)=>{
-//     let nome = req.params.nome;
-//     const filmes = require('./database/filmes.json');
-//     res.send(filmes[nome])
-// })
-   
+servidor.get('/buscar/:trecho',(req,res)=>{
+    
+    console.log("buscando algo...")
+    res.send(req.params.trecho)
+})
+// Criar uma rota que responda à requisição 'http://localhost:3000/busca/????'
+    // servidor.get('/busca/:trecho', (req, res)=>{
+    // 1: Salvar o trecho buscado na variável 'trecho';
+    // 2: Importar o conteúdo de filmes.json para uma constante 'filmes'
+    // 3: Filtrar do array filmes, somente os filmes que possuam o trecho no titulo
+    //    (lembrem da função filmes.filter)
+    // 4: Enviar para o cliente(usando res.send) o resultado da filtragem.
+    // })
+
+    servidor.get('/busca/:trecho', (req, res)=>{
+        let trecho = "Venom";
+        const filmes = ( require('./database/filmes.json'));
+        filmes.filter('');
+        res.send();
+    })
+
+
+   // Por o servidor para ouvir 
+   servidor.listen(3000)
+  
+    
