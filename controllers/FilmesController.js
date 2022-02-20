@@ -10,7 +10,8 @@ const FilmesController = {
     buscaPelaPosicao: (req, res) => {
         let posicao = req.params.posicao;
         const filmes = require('../database/filmes.json');
-        res.send(filmes[posicao]);
+        let filme = filmes[posicao];
+        res.render('filme.ejs',{filme})
     },
     buscarPorTrecho: (req, res) => {
         let trecho = req.params.trecho;
