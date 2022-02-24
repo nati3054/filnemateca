@@ -1,7 +1,7 @@
 const FilmesController = {
     index: (req, res) => {
-        console.log("Alguem fez uma requisição ...");
-        res.send("devolvendo requisição ...");
+        const filmes = require('../database/filmes.json');
+        res.render('index.ejs',{filmes});
     },
     listarFilmes: (req, res) => {
         const filmes = require('../database/filmes.json')
