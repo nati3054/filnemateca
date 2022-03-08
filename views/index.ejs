@@ -14,14 +14,7 @@
     <title>Filnemateca</title>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div id="logo">Filnemateca</div>
-            <form>
-                <input type="search" name="busca" id="busca">
-            </form>
-        </div>
-    </header>
+   <%- include("parts/header")%>
     <main class="container">
         <%
         for(let i = 0; i <filmes.length; i++ ){
@@ -29,7 +22,7 @@
         %>
         <article>
             <img src="/img/<%=f.cartaz%>" alt="<%=f.titulo%>">
-            <a href="/filmes/<%= i %>">
+            <a href="/filmes/<%= f.id %>">
                 <span class="titulo"><%= f.titulo %></span>
                 <span class="duracao"> Censura: <%= f.censura==0 ? 'Livre' : f.censura%> </span>
             </a>
