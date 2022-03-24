@@ -10,13 +10,17 @@ Todos os passos a seguir devem ser executados no arquivo FilmesServices.js
 Execute o comando 'npm test' para acompanhar os testes das funções que você
 irá desenvolver.
 Listar Filmes:
-
+    ✔ Adequar o index.ejs @done(22-03-08 10:20)
+    ✔ Readequar a rota get @done(22-03-08 10:20)
+    router.get('/filmes/:posicao', FilmesController.buscaPorPosicao)
+    ✔ Codar o controller buscaPorId. @done(22-03-08 10:20)
+    
 
     ✔ No arquivo index.ejs, adequar o form para que @done(22-02-24 18:03)
     ele tenha action apontando para a rota /busca
     e método get
   
-    ☐ No FilmesRouter.js, criar uma rota get para 
+    ✔ No FilmesRouter.js, criar uma rota get para @done(22-03-07 17:23)
      '/busca'. Essa rota deve direcionar a requisição
      para FilmesController.buscar
   

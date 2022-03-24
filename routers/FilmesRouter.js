@@ -1,5 +1,7 @@
 // importa o express
 const express = require("express");
+// importa MiddlewareGuardaBusca
+const middlewareGuardaBusca = require('../middlewares/middlewareGuardaBusca')
 // importa FilmesController
 const FilmesController = require('../controllers/FilmesController');
 // criar o roteador com express.Router
@@ -11,7 +13,7 @@ router.get('/filme', FilmesController.listarFilmes);
 
 router.get('/filmes/:id', FilmesController.buscarPorId);
 
-router.get('/busca', FilmesController.buscarPorTrecho);
+router.get('/busca', middlewareGuardaBusca, FilmesController.buscarPorTrecho);
 
 router.get('/buscaporid/:id', FilmesController.buscarPorId);
 
