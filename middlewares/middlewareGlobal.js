@@ -4,8 +4,8 @@ module.exports = (req,res,next) => {
    if(hora<8 || hora>= 20 ){
        res.send("Já e tarde... vá para casa")
    }else{
-       console.log("A requisição já está indo...")
+    //    console.log("A requisição já está indo...")
     next();
-    res.end();
+    // res.end();
     }
 }
