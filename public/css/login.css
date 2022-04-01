@@ -4,6 +4,7 @@
     font-family: 'Rajdhani', sans-serif;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+  
 }
 
 html {
@@ -15,8 +16,9 @@ body{
    display: flex;
    justify-content: center;
    align-items: center;
-   color: #8a2be2;
+   color: #5946c5;
    height: 100%;
+   background-image: url(../img/login.jpg);
 }
 
 form{
@@ -26,6 +28,7 @@ form{
     flex-direction: column;
     border-radius: 20px;
     padding: 20px;
+   
 }
 
 form > label {
@@ -50,5 +53,8 @@ form > label > input{
 .entrar > button{
     padding: 10px;
     width: 40%;
+    color: #8a2be2;
+}
+.entrar > a{
     color: #8a2be2;
 }
