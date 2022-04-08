@@ -46,6 +46,7 @@ const FilmesController = {
     buscarPorGenero: (req, res) => {
 
     },
+    
  }
 
 module.exports = FilmesController

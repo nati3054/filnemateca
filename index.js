@@ -1,5 +1,6 @@
 // importação da biblioteca express
     const express = require('express');
+    const session = require("express-session");
     const path = require('path');
     const middlewareGlobal = require('./middlewares/middlewareGlobal');
     // importando o roteador
@@ -14,6 +15,10 @@
     servidor.set('view engine','ejs');
     // configurando a pasta public como contenedora dos arquivos estáticos 
     servidor.use(express.static(path.join(__dirname, 'public')));
+
+    // Configurando o middleware que lida com session
+    servidor.use(session({secret:"SEGREDO", saveUninitialized: false, resave:true}));
+
 
     // coloca as informações do usuario no req.body
     servidor.use(express.urlencoded({ extended: false }));
