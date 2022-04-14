@@ -46,6 +46,9 @@ const FilmesController = {
     buscarPorGenero: (req, res) => {
 
     },
+    addFilme: (req,res) =>{
+        res.send(req.body)
+    }
     
  }
 
